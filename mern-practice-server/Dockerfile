@@ -8,8 +8,8 @@ WORKDIR /usr/src/api
 COPY package.json .
 COPY yarn.lock .
 
-RUN yarn global add @nestjs.cli
-RUN yarn install -- production=true
+RUN yarn global add @nestjs/cli
+RUN yarn install --production=true
 
 RUN apt-get -q update && apt-get -qy install netcat
 
